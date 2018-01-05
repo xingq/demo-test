@@ -1,0 +1,36 @@
+buildscript {
+   repositories {
+	maven {
+		url "http://192.168.6.1/nexus/content/groups/public"
+	}
+}
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.7.RELEASE")
+        
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+//生成的jar包包名和版本
+jar {
+    baseName = 'demo-test'
+   version =  '1.1.0-RElEASE'
+}
+
+repositories {
+   maven {
+		url "http://192.168.6.1/nexus/content/groups/public"
+	}
+}
+
+//设置jdk的版本
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+//添加编译时的依赖
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}

@@ -14,11 +14,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 // 修改2
-public class SpringController {
+public class SpringController1 {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(SpringController.class, args);
+		SpringApplication.run(SpringController1.class, args);
 	}
 
 }
